@@ -1,0 +1,379 @@
+#assign values to variables---------
+a=b=c=5
+x,y,z=1,2,3
+print(a,b,c)
+print(x,y,z)
+'''o/p
+5 5 5
+1 2 3
+'''
+
+#adding variables--------
+x="Python is"
+y=" Awesome"
+print(x+y)
+'''o/p
+Python is Awesome'''
+
+#string opration-----------(*)----------
+string="all people should try new domino's pizza"
+print(len(string)) #o/p:40
+print("pizza" in string)  #o/p:True #membership operation
+print("people" not in string) #o/p:False
+print(string[0]) #o/p:a  #returns first character in string
+print(string[5:9]) #o/p:eopl  #slicing mechanism
+print(string[:6])  #o/p:all pe
+print(string[6:])  #o/p:ople should try new domino's pizza
+print(string.strip())
+print(string.upper()) #o/p:ALL PEOPLE SHOULD TRY NEW DOMINO'S PIZZA
+print(string.lower()) #o/p:all people should try new domino's pizza
+print(string.replace("pizza","noodles")) #o/p:all people should try new domino's noodles
+print(string.split(","))
+print(string.swapcase()) #o/p:ALL PEOPLE SHOULD TRY NEW DOMINO'S PIZZA  #Make the lower case letters upper case and the upper case letters lower case
+print(max(string)) #o/p:z
+print(min(string))
+
+#boolean operation---------(*)----------
+print(10 > 9) #o/p: True
+print(10 == 9) #o/p: False
+print(10 < 9) #o/p: False
+print(bool("Hello")) #o/p: True
+print(bool(15)) #o/p: True
+bool(None) #o/p: False
+bool(0) #o/p: False
+
+#operators operation--------(*)----------
+x=45
+y=5
+#arithmetic operators--------
+print(x+y)
+print(x-y)
+print(x*y)
+print(x/y)
+print(x**y)
+print(x//y) #o/p:9 #returns quotient
+#assignment operators-------
+x+=3
+print(x)
+x-=3
+print(x)
+x*=3
+print(x)
+x/=3
+print(x)
+x%=9
+print(x) #o/p:0 #returns reminder
+x//=9
+print(x) #o/p:5 #returns quotient
+y**=3
+print(y) #o/p:125
+#Comparison Operators--------
+print(x==y)
+print(x!=y)
+print(x>y)
+print(x<y)
+print(x<=y)
+print(x>=y)
+#Logical Operators---------
+print(x>3 and x<10) #o/p: False
+print(x>3 or x<10) #o/p: True
+print(not(x < 5 and x < 10)) #o/p: True
+#Identity Operators---------
+print(x is y) #o/p: False
+print(x is not y) #o/p: True
+#Membership Operators--------
+a=["apple","banana"]
+print("banana" in a) #o/p: True
+print("apple" not in a) #o/p: False
+#Bitwise Operators---------
+'''and or ^(xor) ~(not) <<(left shift) >>(right shift)'''
+
+#LIST operatiom----------(*)----------
+mylist=["apple","banana","cherry","mango","kiwi"]
+print(len(mylist)) #o/p:5
+print(mylist[1]) #o/p:banana
+print(mylist[-1]) #o/p:kiwi
+print(mylist[2:4]) #o/p:['cherry', 'mango']
+print(mylist[:4]) #o/p:['apple', 'banana', 'cherry', 'mango']
+print(mylist[3:]) #o/p:['mango', 'kiwi']
+mylist.insert(2,"watermelon")
+print(list) #o/p:['apple', 'banana', 'watermelon', 'cherry', 'mango', 'kiwi']
+mylist.append("orange")
+print(mylist) #o/p:['apple', 'banana', 'cherry', 'mango', 'kiwi', 'orange']
+mylist.remove("apple")
+print(mylist) #o/p:['banana', 'cherry', 'mango', 'kiwi']
+mylist.pop(1)
+print(mylist) #o/p:['apple', 'cherry', 'mango', 'kiwi']
+del mylist[0]
+print(mylist) #o/p:['banana', 'cherry', 'mango', 'kiwi']
+mylist.clear()
+print(mylist) #o/p:[]
+mylist.sort()
+print(mylist) #o/p:['apple', 'banana', 'cherry', 'kiwi', 'mango']
+mylist.reverse()
+print(mylist) #o/p:['kiwi', 'mango', 'cherry', 'banana', 'apple']
+newlist=mylist.copy()
+print(newlist) #o/p:['apple', 'banana', 'cherry', 'mango', 'kiwi']
+
+#joining two list
+list1 = ["apple", "banana", "cherry"]
+list2 = ["mango", "pineapple", "papaya"]
+list1.extend(list2)
+print(list1) #o/p:['apple', 'banana', 'cherry', 'mango', 'pineapple', 'papaya']
+
+list3=list1+list2
+print(list3) #o/p:['apple', 'banana', 'cherry', 'mango', 'pineapple', 'papaya']
+
+for x in list2:
+  list1.append(x)
+print(list1) #o/p:['apple', 'banana', 'cherry', 'mango', 'pineapple', 'papaya']
+
+#TUPLE operations-------------(*)----------
+mytuple=("science","maths","engineering","physics","MBBS")
+print(len(mytuple))
+print(mytuple[1])
+print(mytuple[-1])
+print(mytuple[1:4])
+print(mytuple[:4])
+print(mytuple[-4:-1])
+del(mytuple)
+print(mytuple.index("maths")) #o/p:1
+#append value to tuple: #Convert the tuple into a list, add "orange", and convert it back into a tuple:
+thistuple = ("apple", "banana", "cherry")
+y = list(thistuple)
+y.append("orange")
+thistuple = tuple(y)
+print(thistuple) #o/p:('apple', 'banana', 'cherry', 'orange')
+
+#remove value from tuple
+thistuple = ("apple", "banana", "cherry")
+y = list(thistuple)
+y.remove("banana")
+thistuple = tuple(y)
+print(thistuple) #o/p:('apple', 'cherry', 'orange')
+
+#iterate through loop
+mytuple=("science","maths","engineering","physics","MBBS")
+for i in mytuple:
+    print(i)
+#join tuple
+tuple1=(1,2,3,4)
+tuple2=(5,6,7,8)
+tuple=tuple1+tuple2
+print(tuple) #o/p:(1, 2, 3, 4, 5, 6, 7, 8)
+
+#SET operations--------(*)----------
+#add and remove item to set:
+myset={"ADC","ES","HTML","FOC","CN","AWP"}
+myset.add("DE")
+print(myset) #o/p:{'CN', 'HTML', 'AWP', 'FOC', 'DE', 'ADC', 'ES'}
+myset.remove("AWP")
+print(myset) #o/p:{'FOC', 'HTML', 'ES', 'ADC', 'CN'}
+myset.discard("ADC")
+print(myset) #o/p:{'HTML', 'ES', 'AWP', 'CN', 'FOC'}
+myset.clear()
+print(myset) #o/p: set()
+del myset
+
+#joining two set:
+set1 = {"apple", "banana", "cherry"}
+set2 = {"pineapple", "mango", "papaya"}
+set1.update(set2)
+print(set1) #o/p:{'cherry', 'apple', 'mango', 'papaya', 'pineapple', 'banana'}
+set3=set1.union(set2)
+print(set3) #o/p:{'cherry', 'apple', 'mango', 'papaya', 'pineapple', 'banana'}
+
+#DICTIONARY operations----------(*)----------
+mydict = {
+  "brand": "Ford",
+  "model": "Mustang",
+  "country":"india"
+}
+print(mydict) #o/p: {'brand': 'Ford', 'model': 'Mustang', 'country': 'india'}
+print(len(mydict)) #o/p: 3
+print(mydict["model"]) #o/p: Mustang
+print(mydict.keys()) #o/p: dict_keys(['brand', 'model', 'country'])
+print(mydict.values()) #o/p: dict_values(['Ford', 'Mustang', 'india'])
+
+#change item in dictionary:
+mydict["brand"]="i10"
+print(mydict) #o/p:{'brand': 'i10', 'model': 'Mustang', 'country': 'india'}
+
+#add item to dictionary:
+mydict["color"]="Blue"
+print(mydict) #o/p:{'brand': 'Ford', 'model': 'Mustang', 'country': 'india', 'color': 'Blue'}
+
+#remove item to dictionary:
+mydict.popitem()
+print(mydict) #o/p:{'brand': 'Ford', 'model': 'Mustang'}
+mydict.pop("country")
+print(mydict) #o/p:{'brand': 'Ford', 'model': 'Mustang'}
+del mydict["model"]
+print(mydict) #o/p:{'brand': 'Ford', 'country': 'india'}
+mydict.clear()
+print(mydict) #o/p:{}
+
+#copy dictionary
+newdict=mydict.copy()
+print(newdict) #o/p:{'brand': 'Ford', 'model': 'Mustang', 'country': 'india'}
+
+
+#conditional statement-----------(*)------------
+x=int(input("enter the value of x:"))
+if x>2:
+    print("bigger than 2")
+    print("greater than 2")
+
+#if-else example---------
+x=4
+if x>2:
+    print("bigger")
+else:
+    print("smaller")
+print("all done")
+
+#if-elif-else example--------
+x=int(input("enter the value of x:"))
+if(x<20):
+    print("small")
+elif(x<50):
+    print("less than 50")
+else:
+    print("larger")
+print("all done")
+
+#if-elif-else example--------
+score = float(input("Enter Score: "))
+if(score>=0.9):
+    print("A")
+elif(score>=0.8):
+    print("B")
+elif(score>=0.7):
+    print("C")
+elif(score>=0.6):
+    print("D")
+elif(score<6):
+    print("F")
+else:
+    pass
+
+#simple program to find largest number using if-elif-else--------
+num1=int(input("Enter number 1:"))
+num2=int(input("Enter number 2:"))
+num3=int(input("Enter number 3:"))
+
+if(num1>num2) and (num1>num3):
+    print("number 1 is the largest number")
+elif(num2>num1) and (num2>num1):
+    print("number 2 is the largest number")
+else:
+    print("number 3 is the largest number")
+
+#nested loops example------------
+x=42
+if x>1:
+    print("more than 1")
+    if x<100:
+        print("less than 100")
+print("all done")
+
+#function example----------
+def new():
+    print("new example")
+new()
+
+def greet():
+    return "Hello"
+print(greet(),"chirag")
+print(greet(),"sadam")
+
+#simple program of calculator using function---------
+def add(a,b):
+    return a+b
+def subtract(a,b):
+    return a-b
+def multiply(a,b):
+    return a*b
+def divide(a,b):
+    return a/b
+
+print(" 1.add\n 2.subtract\n 3.multiply\n 4.divide")
+operation=int(input("enter your operation number:"))
+a=int(input("enter value of a:"))
+b=int(input("enter value of b:"))
+
+if(operation==1):
+    print("the sum of two number is:",add(a,b))
+elif(operation==2):
+    print("The subtraction of two number is:",subtract(a,b))
+elif(operation==3):
+    print("The multiplication of two number is:",multiply(a,b))
+elif(operation==4):
+    print("The division of two number is:",divide(a,b))
+else:
+    pass
+
+#for loop example---------
+friends=["soham","sadam","asit","amanadeep","jignesh"]
+for i in friends:
+    print("Happy new year:",i)
+
+'''O/p:
+Happy new year: soham
+Happy new year: sadam
+Happy new year: asit
+Happy new year: amanadeep
+Happy new year: jignesh
+'''
+
+#simple for loop example to find number of lowercase uppercase digits and space and append it in a blank list-----------
+str=input("enter your string:")
+u=l=d=0
+chirag=[]
+chirag1=[]
+chirag2=[]
+for i in str:
+    if(i.isupper()):
+        chirag.append(i)
+    elif(i.islower()):
+        chirag1.append(i)
+    elif(i.isdigit()):
+        chirag2.append(i)
+    elif(i.isspace()):
+        u=u+1
+print("uppercase letters are:",chirag)
+print("lowercase letters are:",chirag1)
+print("digits are:",chirag2)
+print("number of spaces are:",u)
+
+'''O/p:
+enter your string:CHIRAG123ahir
+uppercase letters are: ['C', 'H', 'I', 'R', 'A', 'G']
+lowercase letters are: ['a', 'h', 'i', 'r']
+digits are: ['1', '2', '3']
+number of spaces are: 0
+'''
+
+#while loop example------------
+n=10
+while n>0:
+    n=n-1
+    print(n)
+print("all done")
+
+'''O/p:
+9 8 7 6 5 4 3 2 1 0 
+all done'''
+
+#break example----------
+a=input("enter your string:")
+for i in a:
+    if i=="r":
+        break
+    print(i)
+
+'''O/p : 
+enter your string:chirag
+c
+h
+i'''
