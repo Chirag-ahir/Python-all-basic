@@ -4,7 +4,9 @@
 
 <p>Python basic : https://github.com/ShapeAI/Python-for-Data-Science-/blob/master/Day_1_Data_Types_Operators.ipynb</p>
 
-<p>Mutable datatype : The value assigned to a variable can be changed. Immutable datatype : The value assigned to a variable cannot be changed.</p>
+<p>Mutable datatype : The value assigned to a variable can be changed. </p>
+
+<p>Immutable datatype : The value assigned to a variable cannot be changed.</p>
 
 <p>Integer : Integers are whole numbers, such as 1, 20, 3000, 10200305, etc. They are declared simply by writing a whole number. (Immutable)</p>
 
